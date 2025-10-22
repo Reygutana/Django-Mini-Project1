@@ -1,7 +1,9 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+
+from employees.views import employee
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('employees.urls')),  # ✅ make sure this line exists
+    path('', employee.dashboard),
 ]
