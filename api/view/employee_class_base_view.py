@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from employees.models import Employee
 from django.http import Http404
 
-class EmployeeListView(APIView):
+class Employee(APIView):
     def get(self, request):
         employees = Employee.objects.all()
         serializer = EmployeeSerializer(employees, many=True)
